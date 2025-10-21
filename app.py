@@ -9,6 +9,7 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+application = app
 
 # Security: Use environment variables
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', os.urandom(24).hex())
