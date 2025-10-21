@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link href="static/img/favicon.ico" rel="icon" />
+    <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <meta
+      name="title"
+      content="Nana Adjeibea - Free African Language Translator | Twi, Ewe, Ga, Kikuyu Translation"
+    />
+    <meta
+      name="description"
+      content="Professional translation between English and African languages. Translate Twi, Ewe, Ga, Fante, Dagbani, and Kikuyu with voice support. Powered by GhanaNLP AI technology."
+    />
+    <meta
+      name="keywords"
+      content="Twi translator, Ewe translator, Ga translator, African language translation, Ghana languages, Kikuyu translator, Fante translator, Dagbani translator, English to Twi, English to Ewe, GhanaNLP, African languages, text to speech Twi, voice translation"
+    />
+    <meta name="author" content="Raydex" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <title>Nana Adjeibea | Powered by GhanaNLP & Raydex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Raleway:wght@400;600;800&display=swap");
+
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .heading-font {
+        font-family: "Raleway", sans-serif;
+      }
+
+      body {
+        background: #0a0118;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      .animated-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: radial-gradient(
+            circle at 20% 30%,
+            rgba(251, 191, 36, 0.15),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(34, 197, 94, 0.15),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(239, 68, 68, 0.1),
+            transparent 50%
+          );
+        animation: bgShift 15s ease infinite;
+      }
+
+      @keyframes bgShift {
+        0%,
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+
+      .ghana-gradient {
+        background: linear-gradient(
+          135deg,
+          #ef4444 0%,
+          #fbb034 50%,
+          #22c55e 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .animated-border {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(#0a0118, #0a0118) padding-box,
+          linear-gradient(135deg, #ef4444, #fbb034, #22c55e) border-box;
+        animation: borderRotate 3s linear infinite;
+      }
+
+      @keyframes borderRotate {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .glass-card {
+        background: rgba(15, 15, 30, 0.8);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+
+      .neon-glow {
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.3),
+          0 0 40px rgba(251, 191, 36, 0.2), 0 0 60px rgba(251, 191, 36, 0.1);
+      }
+
+      .typing-cursor {
+        display: inline-block;
+        width: 3px;
+        height: 1.3em;
+        background: linear-gradient(135deg, #fbb034, #ef4444);
+        animation: blink 1s infinite;
+        margin-left: 4px;
+        vertical-align: middle;
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .hover-lift {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(251, 191, 36, 0.3);
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .pulse-slow {
+        animation: pulseSlow 3s ease-in-out infinite;
+      }
+
+      @keyframes pulseSlow {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.8;
+        }
+      }
+
+      .spinner {
+        border: 3px solid rgba(251, 191, 36, 0.2);
+        border-top: 3px solid #fbb034;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .float {
+        animation: floating 6s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .shine {
+        background: linear-gradient(90deg, #fbb034, #ef4444, #22c55e, #fbb034);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shine 3s linear infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0a0118;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #fbb034, #ef4444);
+        border-radius: 5px;
+      }
+
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #fbb034;
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #ef4444, #fbb034, #22c55e);
+        background-size: 200% 200%;
+        animation: gradientMove 3s ease infinite;
+        transition: all 0.3s ease;
+      }
+
+      @keyframes gradientMove {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .btn-primary:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 40px rgba(251, 191, 36, 0.5);
+      }
+
+      .star-pattern {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+        background-image: radial-gradient(circle, #fbb034 1px, transparent 1px),
+          radial-gradient(circle, #ef4444 1px, transparent 1px),
+          radial-gradient(circle, #22c55e 1px, transparent 1px);
+        background-size: 50px 50px, 80px 80px, 100px 100px;
+        background-position: 0 0, 25px 25px, 50px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animated-bg"></div>
+    <div class="star-pattern"></div>
+
+    <header class="glass-card sticky top-0 z-50 border-b border-yellow-500/20">
+      <div class="container mx-auto px-6 py-5">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <div class="float">
+              <div
+                class="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 flex items-center justify-center neon-glow"
+              >
+                <span class="text-3xl">🇬🇭</span>
+              </div>
+            </div>
+            <div>
+              <h1 class="text-4xl font-bold heading-font shine">
+                Nana Adjeibea
+              </h1>
+              <p class="text-yellow-400 text-sm font-medium">
+                Powered by GhanaNLP • Built by Raydex
+              </p>
+            </div>
+          </div>
+          <div class="text-right">
+            <div
+              id="apiStatus"
+              class="glass-card px-4 py-2 rounded-full text-sm font-semibold"
+            >
+              <span
+                class="inline-block w-2 h-2 rounded-full bg-green-500 mr-2 pulse-slow"
+              ></span>
+              <span class="text-green-400">Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container mx-auto px-6 py-16 text-center fade-in">
+      <h2 class="text-6xl md:text-7xl font-bold heading-font text-white mb-4">
+        Speak <span class="ghana-gradient">Ghana</span>
+      </h2>
+      <p class="text-2xl text-gray-300 mb-6 max-w-3xl mx-auto font-light">
+        Professional translation between English and African languages
+      </p>
+      <div class="flex justify-center gap-3 flex-wrap">
+        <span
+          class="glass-card px-5 py-2 rounded-full text-yellow-400 font-semibold text-sm"
+          >Twi 🔊</span
+        >
+        <span
+          class="glass-card px-5 py-2 rounded-full text-red-400 font-semibold text-sm"
+          >Ewe 🔊</span
+        >
+        <span
+          class="glass-card px-5 py-2 rounded-full text-green-400 font-semibold text-sm"
+          >Ga</span
+        >
+        <span
+          class="glass-card px-5 py-2 rounded-full text-blue-400 font-semibold text-sm"
+          >Kikuyu 🔊</span
+        >
+        <span
+          class="glass-card px-5 py-2 rounded-full text-purple-400 font-semibold text-sm"
+          >Fante</span
+        >
+      </div>
+      <p class="text-gray-500 text-sm mt-3">🔊 = Voice Available</p>
+    </section>
+
+    <main class="container mx-auto px-6 pb-16">
+      <div class="glass-card rounded-3xl p-6 mb-8 fade-in neon-glow">
+        <div class="flex flex-wrap gap-6 justify-center items-center">
+          <div class="flex-1 min-w-[200px]">
+            <label class="text-yellow-400 font-semibold mb-2 block text-sm"
+              >FROM</label
+            >
+            <select
+              id="sourceLang"
+              class="w-full glass-card text-white px-5 py-4 rounded-2xl font-semibold cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-500 transition text-lg"
+            >
+              <option value="en">🇬🇧 English</option>
+              <option value="tw">🇬🇭 Twi (Asante) 🔊</option>
+              <option value="twi_akuapem">🇬🇭 Twi (Akuapem)</option>
+              <option value="ewe">🇬🇭 Ewe 🔊</option>
+              <option value="ga">🇬🇭 Ga</option>
+              <option value="dagbani">🇬🇭 Dagbani</option>
+              <option value="fante">🇬🇭 Fante</option>
+              <option value="kikuyu">🇰🇪 Kikuyu 🔊</option>
+            </select>
+          </div>
+
+          <button
+            onclick="swapLanguages()"
+            class="glass-card p-4 rounded-2xl hover:scale-110 transition mt-6 neon-glow"
+          >
+            <svg
+              class="w-8 h-8 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+              />
+            </svg>
+          </button>
+
+          <div class="flex-1 min-w-[200px]">
+            <label class="text-green-400 font-semibold mb-2 block text-sm"
+              >TO</label
+            >
+            <select
+              id="targetLang"
+              class="w-full glass-card text-white px-5 py-4 rounded-2xl font-semibold cursor-pointer border-2 border-green-500/30 hover:border-green-500 transition text-lg"
+            >
+              <option value="tw">🇬🇭 Twi (Asante) 🔊</option>
+              <option value="en">🇬🇧 English</option>
+              <option value="twi_akuapem">🇬🇭 Twi (Akuapem)</option>
+              <option value="ewe">🇬🇭 Ewe 🔊</option>
+              <option value="ga">🇬🇭 Ga</option>
+              <option value="dagbani">🇬🇭 Dagbani</option>
+              <option value="fante">🇬🇭 Fante</option>
+              <option value="kikuyu">🇰🇪 Kikuyu 🔊</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 mb-12">
+        <div class="glass-card rounded-3xl p-8 hover-lift fade-in">
+          <div class="flex items-center justify-between mb-6">
+            <h3
+              class="text-2xl font-bold heading-font text-white flex items-center gap-3"
+            >
+              <span class="text-4xl">📝</span>
+              <span id="sourceLangName">English</span>
+            </h3>
+            <div class="glass-card px-4 py-2 rounded-full">
+              <span class="text-yellow-400 font-bold text-sm" id="charCount"
+                >0</span
+              >
+              <span class="text-gray-400 text-sm"> chars</span>
+            </div>
+          </div>
+
+          <textarea
+            id="sourceText"
+            rows="16"
+            placeholder="Type or paste your text here... News articles, stories, messages, documents - anything!"
+            class="w-full px-6 py-5 glass-card text-white rounded-2xl border-2 border-yellow-500/20 transition resize-none text-lg placeholder-gray-500 leading-relaxed"
+          ></textarea>
+
+          <div class="flex gap-4 mt-6">
+            <button
+              onclick="translateText()"
+              class="flex-1 btn-primary text-white py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-2xl"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+              <span id="translateBtn">Translate</span>
+              <div id="translateSpinner" class="spinner hidden"></div>
+            </button>
+            <button
+              onclick="clearAll()"
+              class="glass-card text-red-400 px-8 py-5 rounded-2xl font-bold hover:bg-red-500/20 transition"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="glass-card rounded-3xl p-8 hover-lift fade-in animated-border"
+        >
+          <div class="flex items-center justify-between mb-6">
+            <h3
+              class="text-2xl font-bold heading-font text-white flex items-center gap-3"
+            >
+              <span class="text-4xl">✨</span>
+              <span id="targetLangName">Twi</span>
+            </h3>
+            <div class="glass-card px-4 py-2 rounded-full">
+              <span class="text-green-400 font-bold text-sm">GhanaNLP</span>
+            </div>
+          </div>
+
+          <div
+            id="translatedText"
+            class="w-full min-h-[384px] px-6 py-5 glass-card rounded-2xl border-2 border-green-500/20 text-white text-lg whitespace-pre-wrap leading-relaxed"
+          >
+            <span class="text-gray-500 italic"
+              >Your translation will appear here... 🇬🇭✨</span
+            >
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 mt-6">
+            <button
+              onclick="copyToClipboard()"
+              class="glass-card text-white py-4 rounded-2xl font-bold hover:bg-yellow-500/20 transition flex items-center justify-center gap-2"
+              id="copyBtn"
+              disabled
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
+              </svg>
+              Copy
+            </button>
+            <button
+              onclick="speakTranslation()"
+              class="glass-card text-white py-4 rounded-2xl font-bold hover:bg-green-500/20 transition flex items-center justify-center gap-2"
+              id="speakBtn"
+              disabled
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                id="speakIcon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                />
+              </svg>
+              <span id="speakBtnText">Speak</span>
+            </button>
+            <button
+              onclick="shareText()"
+              class="glass-card text-white py-4 rounded-2xl font-bold hover:bg-red-500/20 transition flex items-center justify-center gap-2"
+              id="shareBtn"
+              disabled
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                />
+              </svg>
+              Share
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6 fade-in">
+        <div class="glass-card rounded-2xl p-6 text-center hover-lift">
+          <div class="text-5xl mb-3">🇬🇭</div>
+          <div class="text-3xl font-bold text-yellow-400 mb-2">8</div>
+          <div class="text-gray-400 text-sm font-medium">
+            Languages Supported
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center hover-lift">
+          <div class="text-5xl mb-3">🔊</div>
+          <div class="text-3xl font-bold text-red-400 mb-2">4</div>
+          <div class="text-gray-400 text-sm font-medium">Voice Enabled</div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center hover-lift">
+          <div class="text-5xl mb-3">🎯</div>
+          <div class="text-3xl font-bold text-green-400 mb-2">Accurate</div>
+          <div class="text-gray-400 text-sm font-medium">GhanaNLP Powered</div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center hover-lift">
+          <div class="text-5xl mb-3">💎</div>
+          <div class="text-3xl font-bold text-blue-400 mb-2">Free</div>
+          <div class="text-gray-400 text-sm font-medium">Always & Forever</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="glass-card border-t border-yellow-500/20 py-10 mt-16">
+      <div class="container mx-auto px-6 text-center">
+        <div class="mb-6">
+          <h3 class="text-3xl font-bold heading-font shine mb-2">
+            Nana Adjeibea × Raydex
+          </h3>
+          <p class="text-gray-400">
+            Empowering African voices through technology
+          </p>
+        </div>
+        <div class="flex justify-center gap-6 mb-6">
+          <span class="text-4xl">🇬🇭</span>
+          <span class="text-4xl">🇰🇪</span>
+          <span class="text-4xl">❤️</span>
+          <span class="text-4xl">💻</span>
+        </div>
+        <p class="text-gray-500 text-sm">
+          Built with love for Jasmine Annyetei Adjei
+        </p>
+        <p class="text-gray-600 text-xs mt-2">
+          Translation powered by
+          <span class="text-yellow-400 font-semibold">GhanaNLP</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let translatedTextContent = "";
+      let currentAudio = null;
+      let isPlaying = false;
+
+      // Languages with TTS support
+      const TTS_SUPPORTED_LANGS = ["tw", "ewe", "kikuyu", "en"];
+
+      window.addEventListener("load", checkAPIStatus);
+
+      async function checkAPIStatus() {
+        try {
+          const response = await fetch("/api/health");
+          const data = await response.json();
+          const statusEl = document.getElementById("apiStatus");
+
+          if (data.status === "needs_setup") {
+            statusEl.innerHTML =
+              '<span class="inline-block w-2 h-2 rounded-full bg-red-500 mr-2 pulse-slow"></span><span class="text-red-400">Setup Required</span>';
+            showNotification(
+              "⚠️ Please configure your GhanaNLP API key in .env file",
+              "warning"
+            );
+          }
+        } catch (error) {
+          console.error("Health check failed:", error);
+        }
+      }
+
+      function updateLanguageDisplay() {
+        const sourceLang = document.getElementById("sourceLang");
+        const targetLang = document.getElementById("targetLang");
+        document.getElementById("sourceLangName").textContent =
+          sourceLang.options[sourceLang.selectedIndex].text
+            .split(" ")
+            .slice(1)
+            .join(" ")
+            .replace(" 🔊", "");
+        document.getElementById("targetLangName").textContent =
+          targetLang.options[targetLang.selectedIndex].text
+            .split(" ")
+            .slice(1)
+            .join(" ")
+            .replace(" 🔊", "");
+      }
+
+      document
+        .getElementById("sourceLang")
+        .addEventListener("change", updateLanguageDisplay);
+      document
+        .getElementById("targetLang")
+        .addEventListener("change", updateLanguageDisplay);
+
+      document
+        .getElementById("sourceText")
+        .addEventListener("input", function () {
+          document.getElementById("charCount").textContent = this.value.length;
+        });
+
+      function swapLanguages() {
+        const source = document.getElementById("sourceLang");
+        const target = document.getElementById("targetLang");
+        const temp = source.value;
+        source.value = target.value;
+        target.value = temp;
+        updateLanguageDisplay();
+
+        const sourceText = document.getElementById("sourceText").value;
+        if (translatedTextContent && sourceText) {
+          document.getElementById("sourceText").value = translatedTextContent;
+          translateText();
+        }
+      }
+
+      async function translateText() {
+        const sourceText = document.getElementById("sourceText").value.trim();
+        const sourceLang = document.getElementById("sourceLang").value;
+        const targetLang = document.getElementById("targetLang").value;
+
+        if (!sourceText) {
+          showNotification("⚠️ Please enter some text to translate", "warning");
+          return;
+        }
+
+        if (sourceLang === targetLang) {
+          showNotification(
+            "⚠️ Source and target languages must be different",
+            "warning"
+          );
+          return;
+        }
+
+        document.getElementById("translateBtn").textContent = "Translating...";
+        document.getElementById("translateSpinner").classList.remove("hidden");
+        document.getElementById("copyBtn").disabled = true;
+        document.getElementById("speakBtn").disabled = true;
+        document.getElementById("shareBtn").disabled = true;
+
+        try {
+          const response = await fetch("/api/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              text: sourceText,
+              source: sourceLang,
+              target: targetLang,
+            }),
+          });
+
+          const data = await response.json();
+
+          if (data.success) {
+            translatedTextContent = data.translated_text;
+            await typewriterEffect(translatedTextContent);
+            document.getElementById("copyBtn").disabled = false;
+            document.getElementById("shareBtn").disabled = false;
+
+            // Enable speak button only if target language supports TTS
+            if (TTS_SUPPORTED_LANGS.includes(targetLang)) {
+              document.getElementById("speakBtn").disabled = false;
+            } else {
+              document.getElementById("speakBtn").disabled = true;
+            }
+
+            showNotification(
+              "✅ Translation complete! Powered by GhanaNLP",
+              "success"
+            );
+          } else {
+            document.getElementById(
+              "translatedText"
+            ).innerHTML = `<span class="text-red-400">❌ Error: ${
+              data.error || "Translation failed"
+            }</span>`;
+            if (data.details) {
+              showNotification(`❌ ${data.details}`, "error");
+            } else {
+              showNotification(
+                "❌ Translation failed. Please try again.",
+                "error"
+              );
+            }
+          }
+        } catch (error) {
+          document.getElementById(
+            "translatedText"
+          ).innerHTML = `<span class="text-red-400">❌ Connection Error: ${error.message}</span>`;
+          showNotification(
+            "❌ Unable to connect to translation service",
+            "error"
+          );
+        } finally {
+          document.getElementById("translateBtn").textContent = "Translate";
+          document.getElementById("translateSpinner").classList.add("hidden");
+        }
+      }
+
+      async function typewriterEffect(text) {
+        const container = document.getElementById("translatedText");
+        container.innerHTML = "";
+
+        const speed = Math.max(8, Math.min(25, 800 / text.length));
+
+        for (let i = 0; i < text.length; i++) {
+          container.textContent += text[i];
+          await new Promise((resolve) => setTimeout(resolve, speed));
+        }
+
+        const cursor = document.createElement("span");
+        cursor.className = "typing-cursor";
+        container.appendChild(cursor);
+
+        setTimeout(() => cursor.remove(), 3000);
+      }
+
+      function copyToClipboard() {
+        navigator.clipboard
+          .writeText(translatedTextContent)
+          .then(() => {
+            const btn = document.getElementById("copyBtn");
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML =
+              '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Copied!';
+            btn.classList.add("bg-green-500/30");
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+              btn.classList.remove("bg-green-500/30");
+            }, 2000);
+            showNotification("📋 Copied to clipboard!", "success");
+          })
+          .catch((err) => {
+            showNotification("❌ Failed to copy", "error");
+          });
+      }
+
+      function shareText() {
+        if (navigator.share && translatedTextContent) {
+          navigator
+            .share({
+              title: "Translation from Nana Adjeibea",
+              text: translatedTextContent,
+            })
+            .then(() => {
+              showNotification("✅ Shared successfully!", "success");
+            })
+            .catch(() => {
+              copyToClipboard();
+            });
+        } else {
+          copyToClipboard();
+        }
+      }
+
+      async function speakTranslation() {
+        if (!translatedTextContent) {
+          showNotification("⚠️ No translation to speak", "warning");
+          return;
+        }
+
+        const targetLang = document.getElementById("targetLang").value;
+        const speakBtn = document.getElementById("speakBtn");
+        const speakBtnText = document.getElementById("speakBtnText");
+
+        // If already playing, stop it
+        if (isPlaying) {
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+          }
+          if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+          }
+          isPlaying = false;
+          speakBtnText.textContent = "Speak";
+          speakBtn.classList.remove("bg-green-500/30");
+          return;
+        }
+
+        // Check if language supports TTS
+        if (!TTS_SUPPORTED_LANGS.includes(targetLang)) {
+          showNotification(
+            `⚠️ Voice not available for this language. Supported: Twi, Ewe, Kikuyu, English`,
+            "warning"
+          );
+          return;
+        }
+
+        speakBtnText.textContent = "Loading...";
+        speakBtn.disabled = true;
+
+        // Use browser TTS for English
+        if (targetLang === "en") {
+          useBrowserTTS(translatedTextContent);
+          speakBtn.disabled = false;
+          return;
+        }
+
+        // Use GhanaNLP TTS for African languages
+        try {
+          showNotification(
+            `🎙️ Generating authentic ${targetLang.toUpperCase()} voice...`,
+            "info"
+          );
+
+          const response = await fetch("/api/text-to-speech", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              text: translatedTextContent,
+              language: targetLang,
+            }),
+          });
+
+          const data = await response.json();
+
+          if (data.success && data.audio_data) {
+            const audioBlob = base64ToBlob(
+              data.audio_data,
+              data.audio_format || "audio/wav"
+            );
+            const audioUrl = URL.createObjectURL(audioBlob);
+
+            currentAudio = new Audio(audioUrl);
+
+            currentAudio.oncanplaythrough = () => {
+              isPlaying = true;
+              speakBtnText.textContent = "Stop";
+              speakBtn.classList.add("bg-green-500/30");
+              speakBtn.disabled = false;
+              showNotification("🔊 Playing authentic voice!", "success");
+            };
+
+            currentAudio.onended = () => {
+              isPlaying = false;
+              speakBtnText.textContent = "Speak";
+              speakBtn.classList.remove("bg-green-500/30");
+              URL.revokeObjectURL(audioUrl);
+              showNotification("✅ Playback complete!", "success");
+            };
+
+            currentAudio.onerror = (e) => {
+              console.error("Audio playback error:", e);
+              isPlaying = false;
+              speakBtnText.textContent = "Speak";
+              speakBtn.classList.remove("bg-green-500/30");
+              speakBtn.disabled = false;
+              URL.revokeObjectURL(audioUrl);
+              showNotification("❌ Audio playback failed", "error");
+            };
+
+            await currentAudio.play();
+          } else {
+            speakBtnText.textContent = "Speak";
+            speakBtn.disabled = false;
+
+            if (data.details) {
+              showNotification(`⚠️ ${data.details}`, "warning");
+            } else {
+              showNotification(
+                "⚠️ Voice not available. TTS may not be enabled on your API key.",
+                "warning"
+              );
+            }
+          }
+        } catch (error) {
+          console.error("TTS Error:", error);
+          speakBtnText.textContent = "Speak";
+          speakBtn.disabled = false;
+          showNotification(`❌ ${error.message}`, "error");
+        }
+      }
+
+      function useBrowserTTS(text) {
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = "en-GB";
+          utterance.rate = 0.9;
+          utterance.pitch = 1;
+
+          utterance.onstart = () => {
+            isPlaying = true;
+            document.getElementById("speakBtnText").textContent = "Stop";
+            document
+              .getElementById("speakBtn")
+              .classList.add("bg-green-500/30");
+            showNotification("🔊 Speaking with browser voice", "info");
+          };
+
+          utterance.onend = () => {
+            isPlaying = false;
+            document.getElementById("speakBtnText").textContent = "Speak";
+            document
+              .getElementById("speakBtn")
+              .classList.remove("bg-green-500/30");
+          };
+
+          utterance.onerror = () => {
+            isPlaying = false;
+            document.getElementById("speakBtnText").textContent = "Speak";
+            document
+              .getElementById("speakBtn")
+              .classList.remove("bg-green-500/30");
+            showNotification("❌ Speech synthesis failed", "error");
+          };
+
+          window.speechSynthesis.speak(utterance);
+        } else {
+          showNotification(
+            "❌ Text-to-speech not supported in this browser",
+            "error"
+          );
+        }
+      }
+
+      function base64ToBlob(base64, mimeType) {
+        const byteCharacters = atob(base64);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        return new Blob([byteArray], { type: mimeType });
+      }
+
+      function clearAll() {
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio = null;
+        }
+        if (isPlaying && "speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+        isPlaying = false;
+
+        document.getElementById("sourceText").value = "";
+        document.getElementById("translatedText").innerHTML =
+          '<span class="text-gray-500 italic">Your translation will appear here... 🇬🇭✨</span>';
+        translatedTextContent = "";
+        document.getElementById("copyBtn").disabled = true;
+        document.getElementById("speakBtn").disabled = true;
+        document.getElementById("shareBtn").disabled = true;
+        document.getElementById("charCount").textContent = "0";
+        document.getElementById("speakBtnText").textContent = "Speak";
+        document.getElementById("speakBtn").classList.remove("bg-green-500/30");
+        showNotification("🗑️ Cleared!", "info");
+      }
+
+      function showNotification(message, type) {
+        const colors = {
+          success: "from-green-500 to-green-600",
+          error: "from-red-500 to-red-600",
+          warning: "from-yellow-500 to-yellow-600",
+          info: "from-blue-500 to-blue-600",
+        };
+
+        const icons = {
+          success: "✅",
+          error: "❌",
+          warning: "⚠️",
+          info: "ℹ️",
+        };
+
+        const notification = document.createElement("div");
+        notification.className = `fixed top-24 right-6 bg-gradient-to-r ${colors[type]} text-white px-6 py-4 rounded-2xl shadow-2xl z-50 fade-in flex items-center gap-3 max-w-md`;
+        notification.innerHTML = `<span class="text-2xl">${icons[type]}</span><span class="font-semibold">${message}</span>`;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.opacity = "0";
+          notification.style.transform = "translateX(100%)";
+          setTimeout(() => notification.remove(), 300);
+        }, 4000);
+      }
+
+      document
+        .getElementById("sourceText")
+        .addEventListener("keydown", function (e) {
+          if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+            e.preventDefault();
+            translateText();
+          }
+          if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+            e.preventDefault();
+            clearAll();
+          }
+        });
+
+      updateLanguageDisplay();
+
+      setTimeout(() => {
+        showNotification(
+          "🇬🇭 Welcome to Nana Adjeibea! Powered by GhanaNLP",
+          "success"
+        );
+      }, 1000);
+    </script>
+  </body>
+</html>
